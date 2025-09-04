@@ -1,0 +1,34 @@
+
+#include <fstream>
+#include <iostream>
+#include <filesystem>
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+int main3()
+{    
+    int n = 5; // число вершин
+    vector<vector<int>> adj(n, vector<int>(n, 0)); // матрица n x n, заполнена 0
+
+    auto add_edge = [&](int u, int v, bool directed = false) {
+        adj[u][v] = 1;
+        if (!directed) adj[v][u] = 1;
+        }
+    ;
+
+    // Добавляем ребра
+    add_edge(0, 1);
+    add_edge(0, 2);
+    add_edge(1, 3);
+    add_edge(3, 4);
+
+    // Вывод матрицы
+    for (int i = 0; i < n; ++i)
+    {
+        for (int j = 0; j < n; ++j) cout << adj[i][j] << " ";
+        cout << "\n";
+    }
+    return 0;
+}
