@@ -1,4 +1,14 @@
-int main2()
+#include <fstream>
+#include <iostream>
+#include <filesystem>
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+
+
+int main()
 {
     ofstream fout("graph.dot");
     fout << "graph G {\n";
