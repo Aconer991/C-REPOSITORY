@@ -1,0 +1,13 @@
+int main2()
+{
+    ofstream fout("graph.dot");
+    fout << "graph G {\n";
+    fout << "0 -- 1;\n";
+    fout << "0 -- 2;\n";
+    fout << "1 -- 3;\n";
+    fout << "3 -- 4;\n";
+    fout << "}\n";
+    fout.close();
+
+    return 0;
+}
